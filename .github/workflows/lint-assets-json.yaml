@@ -1,0 +1,27 @@
+name: check assets.json with bun
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '*/assets.json'
+  pull_request:
+    branches: [main]
+    paths:
+      - '*/assets.json'
+
+jobs:
+  lint-assets:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: checkout repo
+        uses: actions/checkout@v3
+
+      - name: install bun
+        uses: oven-sh/setup-bun@v1
+        with:
+          bun-version: latest
+
+      - name: run asset checker
+        run: bun asset-checker.ts
