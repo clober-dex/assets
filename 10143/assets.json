@@ -5,5 +5,12 @@
     "symbol": "fMON",
     "decimals": 18,
     "icon": "monad_logo.png"
+  },
+  {
+    "address": "0xB5e5Fa5837304FeA6b9ce7e09623e63669Ad95Fb",
+    "name": "Mint Monad",
+    "symbol": "NFT",
+    "decimals": 6,
+    "icon": "nft_logo.png"
   }
 ]
