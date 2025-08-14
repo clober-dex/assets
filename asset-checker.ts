@@ -1,7 +1,7 @@
 import fs from 'fs'
 import path from 'path'
 
-import { Chain, monadTestnet } from 'viem/chains'
+import { type Chain, monadTestnet } from 'viem/chains'
 import { createPublicClient, erc20Abi, getAddress, http } from 'viem'
 
 const CHAINS = [monadTestnet]
@@ -24,9 +24,9 @@ const checkIndentation = (
   filePath: string,
   expectedIndent: number,
 ): boolean => {
-  const original = fs.readFileSync(filePath, 'utf8')
+  const original = fs.readFileSync(filePath, 'utf8').trim()
   const parsed = JSON.parse(original)
-  const reserialized = JSON.stringify(parsed, null, expectedIndent)
+  const reserialized = JSON.stringify(parsed, null, expectedIndent).trim()
 
   const isValid = original === reserialized
   console.log(
