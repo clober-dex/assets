@@ -12,5 +12,12 @@
     "symbol": "NFT",
     "decimals": 6,
     "icon": "nft.png"
+  },
+  {
+    "address": "0x4A5c952C446D5c4bBA9f4517b473EC1718C5f27a",
+    "name": "BUN",
+    "symbol": "BUN",
+    "decimals": 6,
+    "icon": "bun.png"
   }
 ]
