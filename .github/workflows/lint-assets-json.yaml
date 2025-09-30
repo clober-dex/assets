@@ -23,5 +23,8 @@ jobs:
         with:
           bun-version: latest
 
+      - name: install deps
+        run: bun install
+
       - name: run asset checker
         run: bun asset-checker.ts
